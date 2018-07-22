@@ -1,0 +1,41 @@
+.plans
+  margin-bottom 70px
+
+.plans__row
+  display flex
+  margin-left -8px
+
+.plans__radio
+  margin-right 7px
+  display flex
+  align-items center
+
+  &:last-child
+    margin-right 0
+
+.plans__input
+  clip rect(0 0 0 0)
+  height 1px
+  overflow hidden
+  position absolute
+  width 1px
+  
+  &:checked
+
+    &+.plans__input-fake
+
+      &::after
+        content ''
+        position absolute
+        sprite $radiocheck
+        top 13px
+        left 9px
+
+.plans__input-fake
+  position relative
+  sprite $radiobutton
+
+.plans__name
+  font-size 21px
+  color rgb(0, 0, 0)
+  font-weight bold

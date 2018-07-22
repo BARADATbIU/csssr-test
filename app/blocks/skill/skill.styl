@@ -1,0 +1,39 @@
+.skill
+  width 33.33%
+  margin-bottom 14px
+  display flex
+  align-items flex-start
+
+.skill__input
+  clip rect(0 0 0 0)
+  height 1px
+  overflow hidden
+  position absolute
+  width 1px
+  
+  &:checked
+
+    &+.skill__fake
+
+      &::after
+        content ''
+        position absolute
+        sprite $check
+        top -10px
+        left 3px
+
+.skill__fake
+  position relative
+  sprite $checkbox
+  width 11%
+
+.skill__name
+  font-size 21px
+  color rgb(0, 0, 0)
+  font-weight bold
+
+.skill__link
+  font-size 21px
+  font-weight bold
+  color #1f5f97
+  margin-left 5px
